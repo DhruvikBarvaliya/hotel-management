@@ -10,7 +10,7 @@ client.connect(function (err) {
     })
 });
 
-client.query(`Select * from users`, (err, res) => {
+client.query(`Select * from NOW()`, (err, res) => {
     if (!err) {
         console.log(res.rows);
     } else {
