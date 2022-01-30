@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addEmployee' ,employeeController.addEmployee);
 router.get('/getAllEmployee', employeeController.getAllEmployee);
-router.get('/getEmployeeById', employeeController.getEmployeeById);
+router.get('/getEmployeeById?id', employeeController.getEmployeeById);
 router.get('/updateEmployee', employeeController.updateEmployee);
 router.get('/deleteEmployee', employeeController.deleteEmployee);
 

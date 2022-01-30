@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addReservation' ,reservationController.addReservation);
 router.get('/getAllReservation', reservationController.getAllReservation);
-router.get('/getReservationById', reservationController.getReservationById);
+router.get('/getReservationById/:id', reservationController.getReservationById);
 router.get('/updateReservation', reservationController.updateReservation);
 router.get('/deleteReservation', reservationController.deleteReservation);
 

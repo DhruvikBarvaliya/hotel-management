@@ -10,7 +10,7 @@ client.connect(function (err) {
     })
 });
 
-client.query(`Select * from NOW()`, (err, res) => {
+/* client.query(`CREATE TABLE IF NOT EXISTS items ( id serial PRIMARY KEY , item_type VARCHAR NOT NULL, item_name VARCHAR,item_cost VARCHAR,item_details VARCHAR,status VARCHAR);`, (err, res) => {
     if (!err) {
         console.log(res.rows);
     } else {
@@ -18,7 +18,17 @@ client.query(`Select * from NOW()`, (err, res) => {
 
     }
     client.end;
-})
+}) */
+
+/* client.query(`Select * from NOW()`, (err, res) => {
+    if (!err) {
+        console.log(res.rows);
+    } else {
+        console.log(err.message);
+
+    }
+    client.end;
+}) */
 
 app.get("/", (req, res) => {
     res.send("Welcome To Hotel Management")

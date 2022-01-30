@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addCustomer' ,customerController.addCustomer);
 router.get('/getAllCustomer', customerController.getAllCustomer);
-router.get('/getCustomerById', customerController.getCustomerById);
+router.get('/getCustomerById?id', customerController.getCustomerById);
 router.get('/updateCustomer', customerController.updateCustomer);
 router.get('/deleteCustomer', customerController.deleteCustomer);
 

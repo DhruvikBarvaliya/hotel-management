@@ -9,8 +9,10 @@ router.get('/',(req,res)=>{
 
 router.post('/addItem' ,itemController.addItem);
 router.get('/getAllItem', itemController.getAllItem);
-router.get('/getItemById', itemController.getItemById);
+router.get('/getItemById?id', itemController.getItemById);
 router.get('/updateItem', itemController.updateItem);
 router.get('/deleteItem', itemController.deleteItem);
 
 module.exports= router;
+ 
+

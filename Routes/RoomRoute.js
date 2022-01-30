@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addRoom' ,roomController.addRoom);
 router.get('/getAllRoom', roomController.getAllRoom);
-router.get('/getRoomById', roomController.getRoomById);
+router.get('/getRoomById/:id', roomController.getRoomById);
 router.get('/updateRoom', roomController.updateRoom);
 router.get('/deleteRoom', roomController.deleteRoom);
 

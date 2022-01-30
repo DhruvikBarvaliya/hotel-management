@@ -1,3 +1,4 @@
+const client = require('../Config/Config')
 
 module.exports = {
     addReservation: (req, res) => {

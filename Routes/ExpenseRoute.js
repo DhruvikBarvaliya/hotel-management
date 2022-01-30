@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addExpense' ,expenseController.addExpense);
 router.get('/getAllExpense', expenseController.getAllExpense);
-router.get('/getExpenseById', expenseController.getExpenseById);
+router.get('/getExpenseById?id', expenseController.getExpenseById);
 router.get('/updateExpense', expenseController.updateExpense);
 router.get('/deleteExpense', expenseController.deleteExpense);
 

@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addReport' ,reportController.addReport);
 router.get('/getAllReport', reportController.getAllReport);
-router.get('/getReportById', reportController.getReportById);
+router.get('/getReportById/:id', reportController.getReportById);
 router.get('/updateReport', reportController.updateReport);
 router.get('/deleteReport', reportController.deleteReport);
 

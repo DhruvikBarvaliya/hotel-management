@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addPayment' ,paymentController.addPayment);
 router.get('/getAllPayment', paymentController.getAllPayment);
-router.get('/getPaymentById', paymentController.getPaymentById);
+router.get('/getPaymentById/:id', paymentController.getPaymentById);
 router.get('/updatePayment', paymentController.updatePayment);
 router.get('/deletePayment', paymentController.deletePayment);
 

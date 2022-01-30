@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addOrder' ,orderController.addOrder);
 router.get('/getAllOrder', orderController.getAllOrder);
-router.get('/getOrderById', orderController.getOrderById);
+router.get('/getOrderById/:id', orderController.getOrderById);
 router.get('/updateOrder', orderController.updateOrder);
 router.get('/deleteOrder', orderController.deleteOrder);
 

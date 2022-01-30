@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addTransaction' ,transactionController.addTransaction);
 router.get('/getAllTransaction', transactionController.getAllTransaction);
-router.get('/getTransactionById', transactionController.getTransactionById);
+router.get('/getTransactionById/:id', transactionController.getTransactionById);
 router.get('/updateTransaction', transactionController.updateTransaction);
 router.get('/deleteTransaction', transactionController.deleteTransaction);
 

@@ -8,7 +8,7 @@ router.get('/',(req,res)=>{
 
 router.post('/addBooking' ,bookingRouter.addBooking);
 router.get('/getAllBooking', bookingRouter.getAllBooking);
-router.get('/getBookingById', bookingRouter.getBookingById);
+router.get('/getBookingById?id', bookingRouter.getBookingById);
 router.get('/updateBooking', bookingRouter.updateBooking);
 router.get('/deleteBooking', bookingRouter.deleteBooking);
 
