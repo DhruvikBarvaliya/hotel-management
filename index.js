@@ -3,6 +3,8 @@ const express = require('express');
 const app = express()
 const indexRouter = require('./Routes/IndexRouter')
 
+app.use(express.json())
+app.use(express.urlencoded())
 client.connect(function (err) {
     if (err) throw err;
     client.on("connect", () => {

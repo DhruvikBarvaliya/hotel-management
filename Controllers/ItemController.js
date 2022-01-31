@@ -9,7 +9,7 @@ module.exports = {
             if (error) {
                 throw error
             }
-            response.status(201).send(`User added with ID: ${results.insertId}`)
+            res.status(201).send(`User added with ID: ${results.insertId}`)
         })
     },
     getAllItem: (req, res) => {
