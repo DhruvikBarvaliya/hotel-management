@@ -1,4 +1,4 @@
-const {client} = require('../Config/Config')
+const { client } = require('../Config/Config')
 
 module.exports = {
     addItem: (req, res) => {
@@ -22,6 +22,12 @@ module.exports = {
 
     },
     deleteItem: (req, res) => {
-
+        const id = req.query.id;
+        client.query(`delete from items where id=${id}`, (error, results) => {
+            if (error) {
+                throw error
+            }
+            res.status(201).send(`User deleted with ID: ${id}`)
+        })
     }
 }

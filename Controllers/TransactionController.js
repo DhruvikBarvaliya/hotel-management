@@ -1,4 +1,4 @@
-const client = require('../Config/Config')
+const {client} = require('../Config/Config')
 
 module.exports = {
     addTransaction: (req, res) => {
