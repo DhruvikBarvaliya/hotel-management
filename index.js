@@ -1,10 +1,11 @@
-const client = require('./Config/Config')
+const { client } = require('./Config/Config')
 const express = require('express');
 const app = express()
 const indexRouter = require('./Routes/IndexRouter')
-
+const { port } = require('./Config/Config')
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded());
+
 client.connect(function (err) {
     if (err) throw err;
     client.on("connect", () => {
@@ -37,4 +38,4 @@ app.get("/", (req, res) => {
 });
 app.use(indexRouter)
 
-app.listen(3000, console.log(`Listening on Port No:- ${3000}`));
+app.listen(port, console.log(`Listening on Port No:- ${port}`));
