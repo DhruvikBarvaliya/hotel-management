@@ -36,11 +36,12 @@ module.exports = {
         const id = req.query.id;
         const { room_id, customer_id, booking_date, checkin, checkout, status } = req.body;
 
-        client.query(`update bookings set room_id=$1, customer_id=$2, booking_date=$3, checkin=$4, checkout=$5, status=$6 where id=$7`, [room_id, customer_id, booking_date, checkin, checkout, status, id], (err, result) => {
+        client.query(`update bookings set room_id=$1, customer_id=$2, booking_date=$3, checkin=$4, checkout=$5, status=$6 where id=$7 returning *`, [room_id, customer_id, booking_date, checkin, checkout, status, id], (err, result) => {
             if (err) {
                 throw err
             }
-            res.status(200).send(`User modified with ID: ${id}`)
+            // res.status(200).send(`User modified with ID: ${id}`)
+            res.status(200).send(result.rows)
         })
     },
     deleteBooking: (req, res) => {
