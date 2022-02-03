@@ -1,5 +1,5 @@
 const { json } = require('express/lib/response');
-const { client } = require('../Config/Config')
+const { client } = require('../Config/Config');
 
 module.exports = {
     addBooking: (req, res) => {
@@ -10,7 +10,7 @@ module.exports = {
                 throw error
             }
             // res.status(201).send(`User added`)
-            res.status(201).send(result.rows)
+            res.status(201).send(result.rows);
         })
 
     },
@@ -19,7 +19,7 @@ module.exports = {
             if (err) {
                 throw err
             }
-            res.status(200).send(result.rows)
+            res.status(200).send(result.rows);
         })
     },
     getBookingById: (req, res) => {
