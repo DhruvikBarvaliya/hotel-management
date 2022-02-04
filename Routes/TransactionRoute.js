@@ -3,14 +3,14 @@ const router = express.Router();
 const transactionController = require('../Controllers/TransactionController');
 
 
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
     res.send("Inside TransactionRouter");
 });
 
-router.post('/addTransaction' ,transactionController.addTransaction);
+router.post('/addTransaction', transactionController.addTransaction);
 router.get('/getAllTransaction', transactionController.getAllTransaction);
 router.get('/getTransactionById/:id', transactionController.getTransactionById);
-router.get('/updateTransaction', transactionController.updateTransaction);
-router.get('/deleteTransaction', transactionController.deleteTransaction);
+router.put('/updateTransaction/:id', transactionController.updateTransaction);
+router.delete('/deleteTransaction/:id', transactionController.deleteTransaction);
 
-module.exports= router;
+module.exports = router;

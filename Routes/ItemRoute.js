@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
 
 router.post('/addItem', itemController.addItem);
 router.get('/getAllItem', itemController.getAllItem);
-router.get('/getItemById?id', itemController.getItemById);
-router.get('/updateItem', itemController.updateItem);
+router.get('/getItemById?:id', itemController.getItemById);
+router.put('/updateItem?:id', itemController.updateItem);
 router.delete('/deleteItem?:id', itemController.deleteItem);
 
 module.exports = router;

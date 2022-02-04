@@ -3,14 +3,14 @@ const router = express.Router();
 const reportController = require('../Controllers/ReportController');
 
 
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
     res.send("Inside ReportRouter");
 });
 
-router.post('/addReport' ,reportController.addReport);
+router.post('/addReport', reportController.addReport);
 router.get('/getAllReport', reportController.getAllReport);
 router.get('/getReportById/:id', reportController.getReportById);
-router.get('/updateReport', reportController.updateReport);
-router.get('/deleteReport', reportController.deleteReport);
+router.put('/updateReport/:id', reportController.updateReport);
+router.delete('/deleteReport/:id', reportController.deleteReport);
 
-module.exports= router;
+module.exports = router;
